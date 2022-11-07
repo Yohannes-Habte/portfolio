@@ -1,0 +1,353 @@
+
+.header-container {
+  display: grid;
+  grid-template-columns: 35% 70%;
+  grid-template-areas: 
+    "person career"
+    "love love";
+  column-gap: 1rem;
+  row-gap: 1rem;
+  width: var(--container-width-lg);
+  margin: auto;
+}
+
+h1 {
+  font-size: 1.4rem;
+  color: aquamarine;
+}
+
+h2 {
+  font-size: 2rem;
+  color: green;
+}
+
+/* Photo, Name with Profession, Social media and CV Container */
+.photo-personal-info-container {
+  grid-area: person;
+  margin-top: 5rem;
+  background-color: #e6e6fa;
+  border-radius: 0.5rem;
+}
+
+.photo-educational-background {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.photo-container img {
+  border-radius: 0.5rem 0 0.5rem 0;
+}
+
+.social-media-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-media-container-icon {
+  font-size: 2rem;
+  transition: 0.4s;
+}
+
+.social-media-container-icon:hover {
+  color: red;
+}
+
+.resume-chat-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.CV-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid green;
+    padding: 0 0.5rem;
+    border-radius: 0.4rem;
+    color: green;
+    background-color: #b6da7f4a;
+  }
+  
+  .CV-button:hover {
+     color: red;
+    }
+.personal-info span {
+  color: green;
+  font-size: 1rem;
+}
+/* Web Development and Business Administration Container */
+.careers-container {
+  grid-area: career;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  margin-top: 5rem;
+}
+
+.web-development, .business-administration {
+  padding-left: 1rem;
+  background-color: #e6e6fa;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-primary);
+}
+
+.business-administration h3 {
+  padding-left: 2rem;
+}
+
+.MERN {
+    margin-top: 1.5rem;
+    font-weight: 700;
+    height: 9rem;
+    margin-top: -1.5rem;
+    position: relative;
+}
+
+.mongoDB{
+    color: green;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 8%;
+    top: 35%;
+}
+
+.express{
+    color: #000000c8;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 29%;
+    top: 40%;
+}
+
+.react{
+    color:	#4682B4;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transform: rotate(90deg);
+    position: absolute;
+    right: 32%;
+    top: 35%;
+}
+
+.node{
+    color:#24bc66;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transform: rotate(90deg);
+    position: absolute;
+    right: 10%;
+    top: 35%;
+}
+
+.success-container{
+  grid-area: love;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+}
+
+.success-container img{
+  border-radius: 0.5rem;
+}
+
+.personal-mission{
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #e6e6fa;
+}
+
+.personal-mission p{
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-paragraph {
+  text-align: justify;
+}
+
+.success-image1, .success-image2 {
+  margin-left: 0.3rem;
+}
+
+/* Want the animated blinking cursor? */
+
+.ityped-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Laptop screen size */
+@media screen and (min-width:1025px) and (max-width:1920px) {
+  .personal-mission p{
+    font-size: 0.71rem;
+  }
+
+  .mongoDB{
+    color: green;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 5%;
+    top: 35%;
+  }
+  
+  .express{
+    color: #000000c8;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 25%;
+    top: 40%;
+  }
+  
+  .react{
+    color:	#4682B4;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transform: rotate(90deg);
+    position: absolute;
+    right: 28%;
+    top: 35%;
+  }
+  
+  .node{
+    color:#24bc66;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transform: rotate(90deg);
+    position: absolute;
+    right: 7%;
+    top: 35%;
+  }
+  
+}
+
+/* Tablet screen size */
+@media screen and (max-width: 1024px) {
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    width: var(--container-width-lg);
+  }
+
+  .success-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    grid-template-areas: 
+     "paragraph paragraph"
+     "image1 image2";
+    }
+
+    .personal-mission {
+      grid-area: paragraph;
+      border-radius: 0.5rem;
+    }
+
+    .success-image1 {
+      grid-area: image1;
+    }
+
+    .success-image2 {
+      grid-area: image2;
+    }
+
+    .careers-container {
+      margin: 1rem 0;
+    }
+
+    .business-administration h2 {
+      font-size: 1.90rem;
+    }
+
+
+.mongoDB{
+  color: green;
+  font-weight: 700;
+  font-size: 1.4rem;
+  transform: rotate(90deg);
+  position: absolute;
+  left: 3%;
+  top: 35%;
+}
+
+.express{
+  color: #000000c8;
+  font-weight: 700;
+  font-size: 1.4rem;
+  transform: rotate(90deg);
+  position: absolute;
+  left: 23%;
+  top: 40%;
+}
+
+.react{
+  color:	#4682B4;
+  font-weight: 700;
+  font-size: 1.4rem;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 26%;
+  top: 35%;
+}
+
+.node{
+  color:#24bc66;
+  font-weight: 700;
+  font-size: 1.4rem;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 5%;
+  top: 35%;
+}
+
+}
+
+/* Mobile screen size */
+@media screen and (max-width: 760px) {
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        width: var(--container-width-lg);
+    }
+
+    .careers-container {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+    }
+
+    .web-development{
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    h1, h2 {
+      font-size: 1.5rem;
+    }
+
+    .success-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+} 
